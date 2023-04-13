@@ -1,4 +1,7 @@
-import { Canvas } from "@react-three/fiber"
+import { Canvas, extend } from "@react-three/fiber"
+import WaveShaderMaterial from "../shaders/wave/wave"
+
+extend({ WaveShaderMaterial })
 
 export default function Experience() {
 	return (
@@ -6,7 +9,7 @@ export default function Experience() {
 			<pointLight position={[10, 10, 10]} />
 			<mesh>
 				<planeBufferGeometry args={[3, 5]} />
-				<meshStandardMaterial color="red" />
+				<waveShaderMaterial />
 			</mesh>
 		</Canvas>
 	)
