@@ -6,6 +6,13 @@ import { useLoader } from "@react-three/fiber"
 
 extend({ WaveShaderMaterial })
 
+const handlePointerEnter = () => {
+	console.log("in")
+}
+const handlePointerLeave = () => {
+	console.log("out")
+}
+
 export default function Card({ position, index }) {
 	const shaderRef = useRef()
 
@@ -16,7 +23,11 @@ export default function Card({ position, index }) {
 	const [image] = useLoader(THREE.TextureLoader, ["/bball.jpg"])
 
 	return (
-		<mesh position={position}>
+		<mesh
+			position={position}
+			onPointerEnter={handlePointerEnter}
+			onPointerLeave={handlePointerLeave}
+		>
 			<planeGeometry args={[0.4, 0.6, 16, 16]} />
 			<waveShaderMaterial
 				ref={shaderRef}

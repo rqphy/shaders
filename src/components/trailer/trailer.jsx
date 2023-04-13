@@ -15,7 +15,7 @@ export default function Trailer() {
 	return (
 		<mesh ref={trailerRef} position={[0, 0, 2]}>
 			<circleGeometry args={[0.025]} />
-			<meshBasicMaterial color={"red"} />
+			<meshBasicMaterial color={"#f5ebe0"} />
 		</mesh>
 	)
 }
