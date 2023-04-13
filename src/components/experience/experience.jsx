@@ -9,7 +9,7 @@ export default function Experience() {
 		<Canvas camera={{ fov: 10 }}>
 			<pointLight position={[10, 10, 10]} />
 			<Suspense fallback={null}>
-				<ScrollControls distance={2} pages={6} damping={0.2}>
+				<ScrollControls distance={2} pages={4} damping={0.2}>
 					<Container />
 				</ScrollControls>
 			</Suspense>
