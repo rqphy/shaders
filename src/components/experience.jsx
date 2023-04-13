@@ -9,7 +9,7 @@ export default function Experience() {
 			<pointLight position={[10, 10, 10]} />
 			<mesh>
 				<planeBufferGeometry args={[3, 5]} />
-				<waveShaderMaterial />
+				<waveShaderMaterial uColor={"hotpink"} />
 			</mesh>
 		</Canvas>
 	)
