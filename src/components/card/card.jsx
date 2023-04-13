@@ -6,7 +6,7 @@ import { useLoader } from "@react-three/fiber"
 
 extend({ WaveShaderMaterial })
 
-export default function Card({ position }) {
+export default function Card({ position, index }) {
 	const shaderRef = useRef()
 	useFrame(({ clock }) => (shaderRef.current.uTime = clock.getElapsedTime()))
 	const [image] = useLoader(THREE.TextureLoader, ["/bball.jpg"])
@@ -18,6 +18,7 @@ export default function Card({ position }) {
 				ref={shaderRef}
 				uColor={"hotpink"}
 				uTexture={image}
+				uIndex={index}
 			/>
 		</mesh>
 	)
