@@ -1,8 +1,8 @@
 import { Canvas } from "@react-three/fiber"
-import Card from "../card/card"
 import { Suspense } from "react"
 import { ScrollControls } from "@react-three/drei"
 import Container from "../container/container"
+import Trailer from "../trailer/trailer"
 
 export default function Experience() {
 	return (
@@ -13,6 +13,7 @@ export default function Experience() {
 					<Container />
 				</ScrollControls>
 			</Suspense>
+			<Trailer />
 		</Canvas>
 	)
 }

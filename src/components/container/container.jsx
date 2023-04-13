@@ -22,7 +22,7 @@ export default function Container() {
 			{[...new Array(numberOfProject)].map((el, index) => (
 				<Card
 					key={index}
-					position={[index * 0.5, index * -0.5, 0]}
+					position={[index * 0.5, index * -0.5, -0.5]}
 					index={index}
 				/>
 			))}
