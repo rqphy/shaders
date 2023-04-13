@@ -8,7 +8,11 @@ extend({ WaveShaderMaterial })
 
 export default function Card({ position, index }) {
 	const shaderRef = useRef()
-	useFrame(({ clock }) => (shaderRef.current.uTime = clock.getElapsedTime()))
+
+	useFrame(({ clock }) => {
+		// get uTime for shader
+		shaderRef.current.uTime = clock.getElapsedTime()
+	})
 	const [image] = useLoader(THREE.TextureLoader, ["/bball.jpg"])
 
 	return (
