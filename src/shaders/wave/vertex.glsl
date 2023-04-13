@@ -1,6 +1,7 @@
 precision mediump float;
 
 uniform float uTime;
+uniform float uIndex;
 
 varying vec2 vUv;
 varying float vWave;
@@ -104,6 +105,7 @@ float snoise(vec3 v) {
 void main() {
     vUv = uv;
 
+    float time = uTime + uIndex * 0.2;
     vec3 pos = position;
     float noiseFreq = 1.0;
     float noiseAmp = 0.5;
