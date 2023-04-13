@@ -1,5 +1,5 @@
 import { Canvas, extend } from "@react-three/fiber"
-import WaveShaderMaterial from "../shaders/wave/wave"
+import WaveShaderMaterial from "../../shaders/wave/wave"
 
 extend({ WaveShaderMaterial })
 
