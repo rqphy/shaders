@@ -13,7 +13,7 @@ export default function Card({ position, index }) {
 
 	return (
 		<mesh position={position}>
-			<planeBufferGeometry args={[0.4, 0.6, 16, 16]} />
+			<planeGeometry args={[0.4, 0.6, 16, 16]} />
 			<waveShaderMaterial
 				ref={shaderRef}
 				uColor={"hotpink"}
