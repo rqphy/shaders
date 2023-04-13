@@ -7,6 +7,7 @@ const WaveShaderMaterial = shaderMaterial(
 	// Uniform
 	{
 		uColor: new THREE.Color(0, 0, 0),
+		uTime: 0,
 	},
 	vertexShader,
 	fragmentShader
