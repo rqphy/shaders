@@ -6,14 +6,13 @@ import { useLoader } from "@react-three/fiber"
 
 extend({ WaveShaderMaterial })
 
-export default function Card() {
+export default function Card({ position }) {
 	const shaderRef = useRef()
 	useFrame(({ clock }) => (shaderRef.current.uTime = clock.getElapsedTime()))
-
 	const [image] = useLoader(THREE.TextureLoader, ["/bball.jpg"])
 
 	return (
-		<mesh>
+		<mesh position={position}>
 			<planeBufferGeometry args={[0.4, 0.6, 16, 16]} />
 			<waveShaderMaterial
 				ref={shaderRef}

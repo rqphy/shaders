@@ -7,7 +7,12 @@ export default function Experience() {
 		<Canvas camera={{ fov: 10 }}>
 			<pointLight position={[10, 10, 10]} />
 			<Suspense fallback={null}>
-				<Card />
+				{[...new Array(4)].map((el, index) => (
+					<Card
+						key={index}
+						position={[index * 0.5, index * -0.5, 0]}
+					/>
+				))}
 			</Suspense>
 		</Canvas>
 	)
